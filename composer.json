@@ -1,0 +1,50 @@
+{
+    "name": "tgw-sistemas/sped-gtin",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TGW-Sistemas/sped-common.git"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4",
+        "ext-dom": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-soap": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "ext-libxml": "*",
+        "tgw-sistemas/sped-common": "^5.1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "dev-master",
+        "phpunit/phpunit": "^9.3",
+        "scrutinizer/ocular": "^1.8",
+        "phpstan/phpstan": "^1.4",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "NFePHP\\Gtin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NFePHP\\Gtin\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist",
+        "phpcbf": "vendor/bin/phpcbf src/ tests/",
+        "phpcs": "vendor/bin/phpcs src/ tests/",
+        "stan": "vendor/bin/phpstan analyse src/ tests/"
+    },
+    "extra": {
+        "branch-alias": {
+            "v1.0": "1.0-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}
