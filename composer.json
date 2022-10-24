@@ -16,7 +16,7 @@
         "ext-json": "*",
         "ext-simplexml": "*",
         "ext-libxml": "*",
-        "tgw-sistemas/sped-common": "^5.1.0"
+        "tgw-sistemas/sped-common": "dev-master"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "dev-master",
